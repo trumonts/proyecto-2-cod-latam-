@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1400;1500;1600;1700;1800&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Scroll Suave*/
+    scroll-behavior: smooth;
+}
+
+
+
+/* Estilos del tema claro */
+body {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Estilos del tema oscuro */
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff;
+    line-height: 1.2;
+    position: relative;
+}
+
+
+header {
+
+    background-image: linear-gradient(rgba(253, 253, 253, .5), rgba(34, 37, 41, .5)), url("../img/cover-doctorwho.jpg");
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 6px 6px 10px #cecbcb;
+    background-color: #ffffff;
+
+}
+
+.logo-container,
+.logo {
+    max-height: 60px;
+    max-width: 65px;
+    margin-top: 5px;
+    margin-left: 0;
+    position: relative;
+    z-index: 9999;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #09f344;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0px;
+    bottom: -5px;
+    background-color: #3d4ddf;
+    transition: .4s;
+    box-sizing: border-box;
+    border: 10px solid white;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #3d4ddf;
+}
+
+input:checked+.slider:before {
+    transform: translateX(30px);
+    background: #09f344;
+    box-sizing: border-box;
+    border: 10px solid white;
+}
+
+/* Estilos para el menú hamburguesa */
+#menu-Btn {
+    display: inline-block;
+    /* Estilos del botón hamburguesa */
+    background: rgba(188, 233, 245, 0.342);
+    border: 0;
+    outline: 0;
+    font-size: 26px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+#menu-Btn:hover {
+
+    border: 1px solid green;
+    background: white;
+    outline: 0;
+}
+
+i#close_menu {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+body.mobile-menu-active {
+    overflow: hidden;
+}
+
+body.mobile-menu-active i#close_menu {
+    display: block;
+}
+
+body.mobile-menu-active i#open_menu {
+    display: none;
+}
+
+body.mobile-menu-active header {
+    height: 30vh;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: height 0.3s;
+}
+
+body.mobile-menu-active nav {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+body.mobile-menu-active nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+}
+
+/*Fin menu Hamburguersa*/
+
+/* Estilos para el selector de temas */
+.theme-toggle {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #fff;
+    color: whitesmoke;
+    width: fit-content;
+}
+
+.theme-toggle-label {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    color: #333;
+}
+
+
+
+/*Inicio Nav*/
+nav ul {
+    display: flex;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.active {
+    background-color: rgba(2, 175, 243);
+}
+
+.active:hover {
+    background-color: #dfdc3d;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+
+nav li {
+    margin-right: 20px;
+
+}
+
+
+nav li:last-child {
+    margin-right: 20px;
+    background-color: rgba(2, 175, 243);
+    border-radius: 5px;
+}
+
+
+nav ul li a {
+    background-color: white;
+    display: inline-block;
+    padding: 7px 7px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #cecbcb;
+
+}
+
+nav ul li a:hover {
+    background-color: #833ddf;
+    color: #ccc9c9;
+}
+
+/*Fin Nav*/
+
+main {
+    max-width: 100%;
+    margin: auto;
+    width: 80%;
+}
+
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 50%;
+
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+}
+
+.texto-parrafo {
+    background-color: rgba(15, 48, 156, 0.3);
+
+}
+
+.texto-contacto{
+    text-align: center;
+}
+.lista-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.lista-beneficios {
+    text-align: left;
+
+    list-style-position: inside;
+}
+
+.lista-beneficios li {
+    margin: 2px;
+    border: 1px
+}
+
+.inicio>section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-image,
+h1 {
+
+    animation: fadeInLeft 1s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+figure {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+figure img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgb(77, 89, 143);
+
+    box-shadow: 1px 1px 1px 1px #817e7e;
+    /* Agrega el estilo de sombra */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 50%;
+    transition: transform 0.3s ease;
+    /* Transición suave para la animación */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animación personalizada para Floating */
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicar la animación al pasar el cursor por encima de la imagen */
+figure img:hover {
+    animation: flotar 2s infinite;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: justify;
+
+}
+
+.enlace-cv {
+    text-align: center;
+}
+
+/*Botón de CV */
+.boton {
+    color: #f3f2f2;
+    background-color: #2f00ff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 2px solid rgb(31, 253, 1);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px 1px #9998dd;
+    /* Agrega el estilo de sombra */
+}
+
+.boton:hover {
+    background-color: #150c65;
+    transition: .5s;
+    color: #f6f2f2;
+    font-size: 20px;
+    border: 2px solid rgb(0, 128, 32);
+
+}
+
+/*Fin del botón de CV*/
+
+.contacto {
+
+    min-height: 40vh;
+    width: 95%;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: rgba(156, 15, 60, 0.3);
+
+}
+
+p {
+    text-align: justify;
+    padding: 40px;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.text h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.iconos ul {
+    display: flex;
+    margin-bottom: 60px;
+    flex-flow: row;
+    justify-content: center;
+}
+
+
+.iconos a img {
+    max-width: 35%;
+    height: auto;
+
+}
+
+.iconos a img:hover {
+    transform: rotate(0.2turn);
+}
+
+footer {
+    background-color: #DF3D71;
+    color: #ffffff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    height: 100%;
+    color: #ffffff;
+}
+
+/*mobile*/
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-wrapper-25 input {
+    display: none;
+}
+
+
+/*desktop*/
+@media(min-width:1024px) {
+
+    body {
+        color: #ffffff;
+        background-image: url("../img/5018677.jpg");
+        background-repeat: no-repeat;
+        background-blend-mode: darken, luminosity;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .logo-container,
+    .logo {
+        max-height: 190px;
+        max-width: 95px;
+    }
+
+    .inicio {
+        flex-direction: row;
+
+    }
+
+    figure {
+        width: 300px;
+        height: 300px;
+    }
+
+    figure img {
+        width: 300px;
+        height: 300px;
+        margin-top: 25%;
+    }
+
+    h1 {
+        font-size: 52px;
+        text-align: center;
+        margin-left: 5%;
+        margin-top: 20%;
+    }
+
+
+    .boton {
+        font-size: 20px;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .theme-toggle {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .menu-item {
+        color: black;
+    }
+
+
+    .iconos a img {
+        max-width: 25%;
+        height: auto;
+        margin-left: 25%;
+
+    }
+}
+
+
+
+/*Estilos para tableta*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-left: 5%;
+        margin-top: 30%;
+    }
+
+    .boton {
+        margin-left: 35%;
+    }
+
+    button {
+        margin-left: 35%;
+        margin-top: 5%;
+    }
+
+    body.mobile-menu-active header {
+        height: 50vh;
+    }
+
+    .switch {
+        width: 55px;
+        height: 15px;
+        margin-left: 80%;
+        margin-top: 3.5%;
+    }
+
+    .contacto {
+        margin-top: 40px;
+    }
+
+    .iconos a img {
+        max-width: 25%;
+        height: auto;
+        margin-left: 25%;
+
+    }
+}
